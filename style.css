@@ -1,0 +1,346 @@
+ /* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #2a0845;
+    background-image: linear-gradient(135deg, #2a0845 0%, #6441a5 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #1a052e;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #ff007f;
+    box-shadow: 0 4px 20px rgba(255, 0, 127, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00ffcc;
+    text-shadow: 3px 3px 0px #ff007f;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, 
+nav a.active {
+    background-color: #00ffcc;
+    color: #1a052e;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* ==========================================================================
+   3. SEÇÃO HERO (BOAS-VINDAS)
+   ========================================================================== */
+main {
+    flex: 1;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 4px 4px 0px #ff007f;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #00ffcc;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.hero-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.hero-images img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #fff;
+    box-shadow: 5px 5px 0px #ff007f;
+    transition: transform 0.3s ease;
+}
+
+.hero-images img:hover {
+    transform: scale(1.1) rotate(-3deg);
+    border-color: #00ffcc;
+    box-shadow: 5px 5px 0px #00ffcc;
+}
+
+/* ==========================================================================
+   4. SEÇÕES DE PRODUTOS (CARDÁPIO)
+   ========================================================================== */
+.categoria {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.categoria h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #00ffcc;
+    text-shadow: 2px 2px 0px #ff007f;
+}
+
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.produto {
+    background-color: #1a052e;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 3px solid #ff007f;
+    box-shadow: 5px 5px 0px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 9px 9px 0px #00ffcc;
+    border-color: #00ffcc;
+}
+
+.produto h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #e0d5ea;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.produto span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00ffcc;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.produto button {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 2px 2px 0px #000;
+}
+
+.produto button:hover {
+    background-color: #ff3399;
+}
+
+.produto button:active {
+    transform: translateY(2px);
+}
+
+/* ==========================================================================
+   5. BOTÕES GERAIS (CTA)
+   ========================================================================== */
+.cta-buttons {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.btn-primary { 
+    background-color: #ff007f; 
+    color: #fff; 
+}
+
+.btn-secondary { 
+    background-color: #00ffcc; 
+    color: #1a052e; 
+}
+
+/* ==========================================================================
+   6. FORMULÁRIOS (LOGIN / CADASTRO)
+   ========================================================================== */
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+/* ==========================================================================
+   7. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #1a052e;
+    border-top: 5px solid #ff007f;
+    padding: 3rem 2rem 1.5rem 2rem;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 3rem;
+}
+
+.footer-info h4,
+.footer-hours h4,
+.footer-social h4 {
+    color: #00ffcc;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-info p,
+.footer-hours p {
+    color: #e0d5ea;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info i {
+    color: #ff007f;
+    width: 20px;
+}
+
+.text-alert {
+    color: #ff007f !important;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    background-color: #2a0845;
+    color: #00ffcc;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: 2px solid #ff007f;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #00ffcc;
+    color: #1a052e;
+    box-shadow: 0 0 10px #00ffcc;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 0, 127, 0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #a392b5;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,207 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fome de Monstro - Home</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">👾 Fome de Monstro</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="login.html">Login</a>
+            <a href="cadastrar.html">Cadastrar</a>
+        </nav>
+    </header>
+    <main>
+        
+        <!-- SEÇÃO HERO (BOAS-VINDAS) -->
+        <section class="hero">
+            <h1>Sua fome tem tamanho de um monstro? 🍔</h1>
+            <p>Atacamos o seu estômago com os hambúrgueres mais monstruosos e as batatas mais insanas do universo!</p>
+            
+            <div class="hero-images">
+                <img src="burgers-with-buns-cheese-scaled.jpg" alt="Hambúrguer Duplo">
+                <img src="vulcãodepeperone.jpg" alt="Vulcão de Pepperoni">
+                <img src="batatasuprema.jpg" alt="Batata Suprema">
+                <img src="milkshake.jpg" alt="Milkshake Radioativo">
+            </div>
+        </section>
+        <section class="categoria">
+            <h2>🍔 Hambúrgueres Monstruosos</h2>
+            <div class="container-produtos">
+
+                <div class="produto">
+                    <h3>👾 X-Monstro</h3>
+                    <p>Pão brioche, hambúrguer artesanal 180g, queijo cheddar, alface, tomate, cebola roxa e molho especial da casa.</p>
+                    <span>R$ 24,90</span>
+                    <button onclick="adicionarCarrinho('X-Monstro - R$ 24,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🥓 X-Bacon Supremo</h3>
+                    <p>Pão brioche, hambúrguer artesanal 180g, cheddar cremoso, bacon crocante, cebola caramelizada e molho barbecue.</p>
+                    <span>R$ 29,90</span>
+                    <button onclick="adicionarCarrinho('X-Bacon Supremo - R$ 29,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🍔 Duplo Monstro</h3>
+                    <p>Pão brioche, 2 hambúrgueres artesanais 180g, cheddar duplo, bacon, alface, tomate e molho especial.</p>
+                    <span>R$ 34,90</span>
+                    <button onclick="adicionarCarrinho('Duplo Monstro - R$ 34,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🔥 Triplo Terror</h3>
+                    <p>Pão brioche, 3 hambúrgueres artesanais, cheddar triplo, bacon extra, onion rings e molho barbecue.</p>
+                    <span>R$ 42,90</span>
+                    <button onclick="adicionarCarrinho('Triplo Terror - R$ 42,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🍗 Frango Mutante</h3>
+                    <p>Pão australiano, filé de frango empanado, queijo prato, alface, tomate e maionese verde.</p>
+                    <span>R$ 26,90</span>
+                    <button onclick="adicionarCarrinho('Frango Mutante - R$ 26,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>🍟 Batatas Monstruosas</h2>
+            <div class="container-produtos">
+
+                <div class="produto">
+                    <h3>🍟 Batata Monstruosa</h3>
+                    <p>Batata frita crocante com sal especial.</p>
+                    <span>R$ 12,90</span>
+                    <button onclick="adicionarCarrinho('Batata Monstruosa - R$ 12,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🧀 Batata Suprema</h3>
+                    <p>Batata frita, cheddar cremoso, bacon em cubos e cebolinha.</p>
+                    <span>R$ 18,90</span>
+                    <button onclick="adicionarCarrinho('Batata Suprema - R$ 18,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🥓 Batata Explosiva</h3>
+                    <p>Batata frita, cheddar, bacon crocante, calabresa, molho barbecue e cebolinha.</p>
+                    <span>R$ 24,90</span>
+                    <button onclick="adicionarCarrinho('Batata Explosiva - R$ 24,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🔥 Batata Vulcão</h3>
+                    <p>Batata frita, cheddar, bacon, carne desfiada, onion rings e molho especial.</p>
+                    <span>R$ 29,90</span>
+                    <button onclick="adicionarCarrinho('Batata Vulcão - R$ 29,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO: PIZZAS -->
+        <section class="categoria">
+            <h2>🍕 Pizzas Gigantes</h2>
+            <div class="container-produtos">
+
+                <div class="produto">
+                    <h3>🍕 Calabresa Monstro</h3>
+                    <p>Molho de tomate, mussarela, calabresa fatiada, cebola e orégano.</p>
+                    <span>R$ 49,90</span>
+                    <button onclick="adicionarCarrinho('Calabresa Monstro - R$ 49,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🧀 Quatro Queijos</h3>
+                    <p>Mussarela, provolone, parmesão e catupiry.</p>
+                    <span>R$ 54,90</span>
+                    <button onclick="adicionarCarrinho('Quatro Queijos - R$ 54,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🥓 Bacon Explosion</h3>
+                    <p>Molho de tomate, mussarela, bacon crocante, cheddar e cebola caramelizada.</p>
+                    <span>R$ 59,90</span>
+                    <button onclick="adicionarCarrinho('Bacon Explosion - R$ 59,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🌋 Vulcão de Pepperoni</h3>
+                    <p>Molho de tomate, mussarela, pepperoni, catupiry e borda recheada.</p>
+                    <span>R$ 64,90</span>
+                    <button onclick="adicionarCarrinho('Vulcão de Pepperoni - R$ 64,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>🥤 Milkshakes Radioativos</h2>
+            <div class="container-produtos">
+
+                <div class="produto">
+                    <h3>🍫 Chocolate Nuclear</h3>
+                    <p>Sorvete de chocolate, leite, calda de chocolate, chantilly e granulado.</p>
+                    <span>R$ 18,90</span>
+                    <button onclick="adicionarCarrinho('Chocolate Nuclear - R$ 18,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🍓 Morango Atômico</h3>
+                    <p>Sorvete de morango, leite, calda de morango, chantilly e pedaços de morango.</p>
+                    <span>R$ 18,90</span>
+                    <button onclick="adicionarCarrinho('Morango Atômico - R$ 18,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>🍪 Cookies Mutantes</h3>
+                    <p>Sorvete de baunilha, cookies triturados, leite, chantilly e calda de chocolate.</p>
+                    <span>R$ 22,90</span>
+                    <button onclick="adicionarCarrinho('Cookies Mutantes - R$ 22,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+                <div class="produto">
+                    <h3>⚡ Ovomaltine Radioativo</h3>
+                    <p>Sorvete de creme, leite, Ovomaltine, chantilly e cobertura de chocolate.</p>
+                    <span>R$ 24,90</span>
+                    <button onclick="adicionarCarrinho('Ovomaltine Radioativo - R$ 24,90')">Adicionar ao Carrinho 🛒</button>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="cta-buttons">
+            <a href="produtos.html" class="btn btn-primary">Devorar Cardápio 🍕</a>
+            <a href="cadastrar.html" class="btn btn-secondary">Criar Conta 🍟</a>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <h4>📞 Contato</h4>
+                <p><i class="fas fa-phone-alt"></i> (61) 99999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@fomedemonstro.com.br</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Dos Monstros, 666 - Centro</p>
+            </div>
+
+            <div class="footer-hours">
+                <h4>🕒 Funcionamento</h4>
+                <p>Terça a Quinta: 18:00 às 23:00</p>
+                <p>Sexta a Domingo: 18:00 às 01:00</p>
+                <p class="text-alert">Fechado às Segundas-feiras</p>
+            </div>
+<footer>   
+</body>
+</html>

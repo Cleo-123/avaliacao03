@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fome de Monstro - Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <div class="logo">👾 Fome de Monstro</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html" class="active">Cardápio</a>
+        <a href="login.html">Login</a>
+        <a href="cadastrar.html">Cadastrar</a>
+    </nav>
+</header>
+
+<main class="cardapio">
+    <h1>🍔 Nosso Cardápio Monstruoso</h1>
+
+    <div class="produtos">
+
+        <div class="produto">
+            <img src="burgers-with-buns-cheese-scaled.jpg" alt="Hambúrguer Duplo">
+            <h2>Hambúrguer Duplo</h2>
+            <p>2 carnes, cheddar, bacon e molho especial.</p>
+            <span>R$ 29,90</span>
+            <button onclick="adicionarCarrinho('Hambúrguer Duplo')">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="vulcãodepeperone.jpg" alt="Vulcão de Pepperoni">
+            <h2>Vulcão de Pepperoni</h2>
+            <p>Pizza recheada com muito pepperoni e queijo.</p>
+            <span>R$ 49,90</span>
+            <button onclick="adicionarCarrinho('Vulcão de Pepperoni')">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="batatasuprema.jpg" alt="Batata Suprema">
+            <h2>Batata Suprema</h2>
+            <p>Batatas com cheddar, bacon e cebola crispy.</p>
+            <span>R$ 24,90</span>
+            <button onclick="adicionarCarrinho('Batata Suprema')">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="milkshake.jpg" alt="Milkshake Radioativo">
+            <h2>Milkshake Radioativo</h2>
+            <p>Chocolate, chantilly e cobertura especial.</p>
+            <span>R$ 19,90</span>
+            <button onclick="adicionarCarrinho('Milkshake Radioativo')">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+
+    </div>
+
+    <div class="carrinho">
+        <h2>🛒 Carrinho</h2>
+        <ul id="listaCarrinho"></ul>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Fome de Monstro - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+const carrinho = [];
+
+function adicionarCarrinho(produto) {
+    carrinho.push(produto);
+
+    const lista = document.getElementById("listaCarrinho");
+    lista.innerHTML = "";
+
+    carrinho.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        lista.appendChild(li);
+    });
+
+    alert(produto + " adicionado ao carrinho!");
+}
+</script>
+
+</body>
+</html>
